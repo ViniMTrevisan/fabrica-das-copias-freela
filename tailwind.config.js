@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#111827', // Um cinza quase preto (Rich Black)
-          light: '#1F2937',   // Um cinza um pouco mais claro para cartões
+          DEFAULT: '#1C1917', // Warm Gray / Stone 900
+          light: '#292524',   // Warm Gray / Stone 800
         },
         accent: {
           DEFAULT: '#FACC15', // Amarelo Ouro
