@@ -5,46 +5,52 @@ import Button from '../components/Button';
 import { OUTSOURCING_ITEMS } from '../constants/data';
 
 const Outsourcing = () => (
-    <Section id="outsourcing" className="bg-yellow-100 relative overflow-hidden pt-10 pb-20">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
-
+    <Section id="outsourcing" className="bg-white relative overflow-hidden py-24">
         <div className="container mx-auto px-4 relative z-10">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
                 {/* Left Column: Visuals */}
-                <div className="space-y-6 h-full flex flex-col">
-                    <div className="rounded-2xl overflow-hidden shadow-2xl flex-grow">
+                <div className="relative">
+                    <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
+                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                         <img
                             src="/assets/impressora-locacao.jpeg"
                             alt="Locação de Impressoras"
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+                        <div className="absolute bottom-6 left-6 text-white">
+                            <p className="font-bold text-lg">Tecnologia de Ponta</p>
+                            <p className="text-sm opacity-90">Equipamentos modernos para sua empresa</p>
+                        </div>
                     </div>
                 </div>
 
                 {/* Right Column: Content */}
-                <div className="w-full">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        Locação de Impressoras & Outsourcing
+                <div>
+                    <span className="text-accent font-bold tracking-widest uppercase text-xs mb-2 block">Outsourcing de Impressão</span>
+                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        Foque no seu negócio, <br />nós cuidamos das cópias.
                     </h2>
-                    <p className="text-gray-600 text-lg mb-8 font-medium leading-relaxed">
-                        Foque no seu negócio enquanto cuidamos de toda a sua infraestrutura de impressão. Reduza custos operacionais e aumente a produtividade da sua equipe com equipamentos de última geração.
+                    <p className="text-gray-500 text-lg mb-10 leading-relaxed font-light">
+                        Reduza custos operacionais e aumente a produtividade da sua equipe com nossa solução completa de outsourcing. Manutenção, suprimentos e equipamentos inclusos.
                     </p>
 
-                    <div className="grid gap-4 mb-8">
+                    <div className="grid gap-4 mb-10">
                         {OUTSOURCING_ITEMS.map((item, idx) => (
-                            <div key={idx} className="bg-white/90 backdrop-blur p-5 rounded-xl shadow-lg flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
-                                <div className="bg-primary text-white p-2 rounded-lg mt-1">
-                                    <CheckCircle2 className="w-5 h-5" />
+                            <div key={idx} className="flex items-start gap-4 group">
+                                <div className="bg-gray-50 p-2 rounded-lg group-hover:bg-accent/10 transition-colors">
+                                    <CheckCircle2 className="w-5 h-5 text-accent" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-bold text-primary">{item.title}</h3>
-                                    <p className="text-gray-800 text-sm">{item.desc}</p>
+                                    <h3 className="text-lg font-bold text-gray-900">{item.title}</h3>
+                                    <p className="text-gray-500 text-sm">{item.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                     <Button
-                        className="bg-primary text-white hover:bg-gray-800 shadow-xl w-full"
+                        className="bg-primary text-white hover:bg-gray-800 shadow-xl w-full md:w-auto px-8 py-4 rounded-full"
                         message="Olá, tenho interesse na Locação de Impressoras."
                     >
                         Falar com Especialista
